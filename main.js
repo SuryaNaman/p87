@@ -19,10 +19,10 @@ function player_update() {
 function new_image(get_img) {
     fabric.Image.fromURL(get_img, function(img) {
         image = img;
-        image.scaleToWidth(block_w);
-        image.scaleToHeight(block_h);
+        image.scaleToWidth(image_w);
+        image.scaleToHeight(image_h);
         image.set({ top: player_y, left: player_x });
-        canvas.add(block);
+        canvas.add(image);
     });
 }
 window.addEventListener("keydown", my_keydown);
